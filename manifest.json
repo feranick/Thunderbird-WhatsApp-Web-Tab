@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "WhatsApp Web Tab",
+  "description": "__MSG_extensionDescription__",
+  "version": "0.1.6",
+  "author": "Nicola Ferralis",
+  "homepage_url": "https://github.com/feranick/Thunderbird-WhatsApp-Web-Tab/",
+  "applications": {
+    "gecko": {
+      "id": "feranick.whatsapp-web-tab@addons.thunderbird.net",
+      "strict_min_version": "78.0"
+    }
+  },
+  "default_locale": "en",
+  "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://*.whatsapp.com/*"
+    ],
+  "icons": {
+    "48": "skin/whatsapp_web_icon.svg",
+    "96": "skin/whatsapp_web_icon.svg"
+  },
+  "browser_action": {
+    "default_title": "WhatsApp Web",
+    "default_icon": "skin/whatsapp_web_icon.svg"
+  },
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 // --- 1. TOOLBAR BUTTON ---
 browser.spacesToolbar.addButton('WhatsAppWeb', {
-    title: "WhatsApp Web",
+    title: browser.i18n.getMessage("toolbarButtonTitle"),
     defaultIcons: "skin/whatsapp_web_icon.svg",
     url: "https://web.whatsapp.com/"
 });
@@ -25,14 +25,14 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 // Create the "Share Text" menu item
 browser.menus.create({
   id: "share-to-whatsapp",
-  title: "Share text to WhatsApp",
+  title: browser.i18n.getMessage("contextMenuShareText"),
   contexts: ["selection"] 
 });
 
 // Create the "Chat with Number" menu item
 browser.menus.create({
   id: "chat-on-whatsapp",
-  title: "Chat with this Phone Number",
+  title: browser.i18n.getMessage("contextMenuChatNumber"),
   contexts: ["selection"] 
 });
 

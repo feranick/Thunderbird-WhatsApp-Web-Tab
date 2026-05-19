@@ -1,10 +1,10 @@
 {
   "extensionName": {
-    "message": "Pestaña de WhatsApp Web",
+    "message": "Onglet WhatsApp Web",
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "Añade un botón para abrir WhatsApp Web en una nueva pestaña.",
+    "message": "Ajoute un bouton pour ouvrir WhatsApp Web dans un nouvel onglet.",
     "description": "Description of the extension."
   },
   "toolbarButtonTitle": {
@@ -12,11 +12,11 @@
     "description": "Hover title for the Spaces Toolbar button."
   },
   "contextMenuShareText": {
-    "message": "Compartir texto en WhatsApp",
+    "message": "Partager le texte sur WhatsApp",
     "description": "Context menu text for sharing text."
   },
   "contextMenuChatNumber": {
-    "message": "Chatear con este número de teléfono",
+    "message": "Discuter avec ce numéro de téléphone",
     "description": "Context menu text for starting a chat with a highlighted number."
   }
 }

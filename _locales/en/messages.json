@@ -1,6 +1,22 @@
 {
+  "extensionName": {
+    "message": "WhatsApp Web Tab",
+    "description": "Name of the extension."
+  },
   "extensionDescription": {
     "message": "Adds a button to open WhatsApp Web in a new tab.",
     "description": "Description of the extension."
+  },
+  "toolbarButtonTitle": {
+    "message": "WhatsApp Web",
+    "description": "Hover title for the Spaces Toolbar button."
+  },
+  "contextMenuShareText": {
+    "message": "Share text to WhatsApp",
+    "description": "Context menu text for sharing text."
+  },
+  "contextMenuChatNumber": {
+    "message": "Chat with this Phone Number",
+    "description": "Context menu text for starting a chat with a highlighted number."
   }
 }

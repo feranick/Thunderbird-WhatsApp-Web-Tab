@@ -18,5 +18,21 @@
   "contextMenuChatNumber": {
     "message": "Chatear con este número de teléfono",
     "description": "Context menu text for starting a chat with a highlighted number."
+  },
+  "optionsNotificationsHeader": {
+    "message": "Notificaciones",
+    "description": "Header of the notifications section in the options page."
+  },
+  "optionsShowNotificationsLabel": {
+    "message": "Mostrar notificaciones de WhatsApp",
+    "description": "Label of the checkbox that mutes/displays notifications."
+  },
+  "optionsShowNotificationsHint": {
+    "message": "Si se desactiva, no se mostrará ningún aviso para los nuevos mensajes de WhatsApp.",
+    "description": "Explanation shown under the notifications checkbox."
+  },
+  "optionsSaved": {
+    "message": "Guardado.",
+    "description": "Confirmation shown after a preference is saved."
   }
 }

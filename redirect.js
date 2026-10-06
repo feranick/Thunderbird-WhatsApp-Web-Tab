@@ -111,6 +111,23 @@ function openOrUpdateWhatsApp(targetUrl) {
 
 const whatsappState = new Map(); // tabId -> count
 
+// User preference (set in the add-on Options page). Cached here and kept
+// in sync so the onUpdated listener can check it synchronously.
+let showNotifications = true;
+
+browser.storage.local.get({ showNotifications: true }).then((prefs) => {
+  showNotifications = prefs.showNotifications;
+});
+
+browser.storage.onChanged.addListener((changes, area) => {
+  if (area === "local" && changes.showNotifications) {
+    showNotifications = changes.showNotifications.newValue;
+    if (!showNotifications) {
+      browser.notifications.clear("whatsapp-unread-alert");
+    }
+  }
+});
+
 browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.title && tab.url && tab.url.includes("web.whatsapp.com")) {
     const title = changeInfo.title;
@@ -124,7 +141,8 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     const match = title.match(/\((\d+)\+?\)/);
     const count = match ? parseInt(match[1], 10) : 0;
 
-    if (count > previousCount) {
+    // Count is still tracked while muted, so unmuting won't fire a stale alert
+    if (showNotifications && count > previousCount) {
       const body = count === 1 ? "You have a new message."
                                : `You have ${count} new messages.`;
       browser.notifications.create("whatsapp-unread-alert", {
